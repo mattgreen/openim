@@ -1,0 +1,227 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,3,0,0
+ PRODUCTVERSION 0,3,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "OpenIM Core"
+            VALUE "FileVersion", "0, 3, 0, 0"
+            VALUE "InternalName", "OpenIM core component"
+            VALUE "LegalCopyright", "Copyright (C) 2005"
+            VALUE "OriginalFilename", "OpenIM.dll"
+            VALUE "ProductName", "OpenIM"
+            VALUE "ProductVersion", "0, 3, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ACCOUNTEDITOR DIALOGEX 0, 0, 260, 142
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "OpenIM Account Editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ACCOUNTS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,191,103
+    PUSHBUTTON      "Add",IDC_ADD,203,7,50,14
+    PUSHBUTTON      "Edit",IDC_EDIT,203,25,50,14,WS_DISABLED
+    PUSHBUTTON      "Remove",IDC_REMOVE,203,44,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "Close",IDOK,203,121,50,14
+    LTEXT           "",IDC_STATIC,7,116,246,2,0,WS_EX_STATICEDGE
+END
+
+IDD_ACCOUNT_GENERAL_PAGE DIALOGEX 0, 0, 220, 158
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "General"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_USERID,69,89,79,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,69,110,79,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DISPLAYNAME,69,131,80,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LABEL,16,34,190,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Sign Up...",IDC_SIGNUP,156,89,50,14
+    PUSHBUTTON      "Retrieve...",IDC_RETRIEVE,156,110,50,14
+    LTEXT           "Service:",IDC_STATIC,16,72,27,8
+    LTEXT           "User ID:",IDC_STATIC,16,92,28,8
+    LTEXT           "Password:",IDC_STATIC,16,112,34,8
+    LTEXT           "Display Name:",IDC_STATIC,16,132,46,8
+    LTEXT           "Enter a name for this account, such as ""Main Account.""",
+                    IDC_STATIC,17,18,178,10
+    GROUPBOX        "Label",IDC_STATIC,7,7,206,49
+    GROUPBOX        "User Information",IDC_STATIC,7,58,206,93
+    CONTROL         "",IDC_PROTOCOL,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,70,70,78,30
+END
+
+IDD_ACCOUNT_CONNECTION_PAGE DIALOGEX 0, 0, 186, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Connection"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Basic",IDC_STATIC,7,7,172,80
+    CONTROL         "Connect automatically at startup",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,18,121,10
+    CONTROL         "Reconnect when unexpectedly disconnected",IDC_CHECK2,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,30,159,10
+END
+
+IDD_PREFSDIALOG DIALOGEX 0, 0, 355, 228
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "OK",IDC_BUTTON1,240,207,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON2,298,207,50,14
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_NOSCROLL | WS_BORDER | 
+                    WS_TABSTOP,7,7,90,191
+END
+
+IDD_LOGDISPLAY DIALOGEX 0, 0, 369, 153
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "OpenIM System Log"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_EVENTS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | 
+                    LVS_NOSORTHEADER | WS_TABSTOP,0,0,369,153
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ACCOUNTEDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_ACCOUNT_GENERAL_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_ACCOUNT_CONNECTION_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_PREFSDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 348
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 221
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
