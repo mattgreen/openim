@@ -12,7 +12,7 @@ OpenIM uses a publish/subscribe architecture to minimize coupling
 between components. This results in components that are
 smaller, easier to reason about, and test. For example, the AIM protocol
 component has no knowledge of any UI; it merely responds to method calls
-and sends out events (such as AccountConnectedEvent) as they occur. The EventBus is responsible for distributing Events to registered components. Partitioning features along component boundaries makes development incredibly pleasant.
+and sends out events (such as AccountConnectedEvent) as they occur. The EventManager is responsible for distributing Events to registered components. Partitioning features along component boundaries makes development incredibly pleasant.
 
 (Also, the use of <a href="http://en.wikipedia.org/wiki/Curiously_recurring_template_pattern">CRTP</a> in <a href="https://github.com/mattgreen/openim/blob/master/OpenIM/Events/AccountEvents.hpp">AccountEvents.hpp</a> should induce the Inception theme in
 your head.)
